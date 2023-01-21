@@ -4,18 +4,19 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\TextArea;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class MainSliders extends Resource
+class WhoWeAre extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\MainSliders>
+     * @var class-string<\App\Models\WhoWeAre>
      */
-    public static $model = \App\Models\MainSliders::class;
+    public static $model = \App\Models\WhoWeAre::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -43,12 +44,19 @@ class MainSliders extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Main title', 'main_title'),
-            Text::make('Sub title', 'sub_title'),
-            Text::make('Sub stitle', 'sub_subtitle'),
-            Text::make('Button title one', 'button_title_one'),
-            Text::make('Button title two', 'button_title_two'),
-            Image::make('Background image', 'background_image'),
+            Text::make('Small title','small_title'),
+            Text::make('Big title','big_title'),
+            Text::make('Sub title','sub_title'),
+            TextArea::make('Description','description'),
+            Text::make('Tagline one title','tagline_one_title'),
+            TextArea::make('Tagline one description','tagline_one_description'),
+            Text::make('Tagline two title','tagline_two_title'),
+            TextArea::make('Tagline two description','tagline_two_description'),
+            Text::make('Tagline three title','tagline_three_title'),
+            TextArea::make('Tagline three description','tagline_three_description'),
+            Image::make('Left image', 'left_image'),
+            Text::make('Left title', 'left_title'),
+            Text::make('Left Description', 'left_description')
         ];
     }
 

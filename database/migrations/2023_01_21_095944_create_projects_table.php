@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('main_sliders', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('main_title');
-            $table->string('sub_title');
-            $table->string('sub_subtitle');
-            $table->string('button_title_one');
-            $table->string('button_title_two');
-            $table->string('background_image');
+            $table->foreignId('category')->references('id')->on('project_categories');
+            $table->string('project_title');
+            $table->text('project_description');
+            $table->boolean('is_active')->default(true);
+            $table->string('project_feature_image');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('main_sliders');
+        Schema::dropIfExists('projects');
     }
 };

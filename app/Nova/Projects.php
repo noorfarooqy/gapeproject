@@ -5,17 +5,20 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\TextArea;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class MainSliders extends Resource
+class Projects extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
-     * @var class-string<\App\Models\MainSliders>
+     * @var class-string<\App\Models\Projects>
      */
-    public static $model = \App\Models\MainSliders::class;
+    public static $model = \App\Models\Projects::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -43,12 +46,12 @@ class MainSliders extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Main title', 'main_title'),
-            Text::make('Sub title', 'sub_title'),
-            Text::make('Sub stitle', 'sub_subtitle'),
-            Text::make('Button title one', 'button_title_one'),
-            Text::make('Button title two', 'button_title_two'),
-            Image::make('Background image', 'background_image'),
+            BelongsTo::make('Project Category', 'ProjectCategory', ProjectCategories::class),
+            Text::make('Project title'),
+            TextArea::make('Project description'),
+            Boolean::make('Is Active'),
+            Image::make('Project Feature Image'),
+
         ];
     }
 

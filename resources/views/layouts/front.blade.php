@@ -43,9 +43,9 @@
     <!-- intro-section -->
 
 
-    <!-- oilgas-section -->
-    @include('includes.oil_gas')
-    <!-- oilgas-section end -->
+    <!-- basic-info-section -->
+    @include('includes.basic_info')
+    <!-- basic-info-section end -->
 
 
     <!-- weare-section-two -->

@@ -10,24 +10,26 @@
                 <div class="filters">
                     <ul class="filter-tabs filter-btns centred clearfix">
                         <li class="active filter" data-role="button" data-filter=".all">All</li>
-                        <li class="filter" data-role="button" data-filter=".oil_gas">Oil & Gas</li>
-                        <li class="filter" data-role="button" data-filter=".factory">FACTORY</li>
-                        <li class="filter" data-role="button" data-filter=".chamical">CHAMICAL</li>
-                        <li class="filter" data-role="button" data-filter=".power_energy">power & energy</li>
+                        @foreach ($project_categories as $category)
+                            
+                        <li class="filter" data-role="button" data-filter=".{{$category->category}}">{{$category->category}}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="items-container row clearfix">
+                @foreach ($project_categories as $category)
+                @foreach ($category?->projects ?? [] as $project)
                 <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all chamical oil_gas factory">
                     <div class="project-block-four">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="/images/gallery/project-12.jpg" alt="">
+                                <img src="{{$project?->project_feature_image ?? '/images/gallery/project-12.jpg'}}" alt="">
                             </figure>
                             <div class="overlay-box">
                                 <div class="box">
                                     <div class="inner">
-                                        <h3><a href="case-single.html">Upstream Oil & Gas Model Feature Work</a></h3>
+                                        <h3><a href="case-single.html">{{$project->project_title}}</a></h3>
                                         <div class="btn-box"><a href="case-single.html">Learn more</a></div>
                                     </div>
                                 </div>
@@ -35,6 +37,8 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
+                @endforeach
                 <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all oil_gas power_energy">
                     <div class="project-block-four">
                         <div class="inner-box">

@@ -4,14 +4,14 @@
             <div class="col-lg-8 col-md-12 col-sm-12 content-column">
                 <div class="content-box">
                     <div class="top-box">
-                        <h2>Oil & Gas</h2>
-                        <p>Our mission is to be there for you and your order at all times. That’s the only way to ensure that our pumping and production systems can operate without downtime. With us, you’ll never face expensive contractual penalties</p>
+                        <h2>{{$basic_info?->title ?? 'Oil and Gas'}}</h2>
+                        <p>{{$basic_info?->description ?? 'none'}}</p>
                     </div>
-                    <figure class="image-box"><img src="/images/resource/oil-1.jpg" alt=""></figure>
+                    <figure class="image-box"><img src="{{$basic_info?->resource_image ?? '/images/resource/oil-1.jpg'}}" alt=""></figure>
                     <div class="inner-box wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
-                        <h3>The State of Connected Planning</h3>
-                        <div class="text">Global Congress on Petroleum Engineering and Natural Gas Recovery</div>
-                        <div class="btn-box"><a href="#">Read more</a></div>
+                        <h3>{{$basic_info?->second_title ?? ''}}</h3>
+                        <div class="text">{{$basic_info?->second_description ?? ''}}</div>
+                        <div class="btn-box"><a href="#">{{$basic_info?->button_text ?? 'Read More'}}</a></div>
                     </div>
                 </div>
             </div>
