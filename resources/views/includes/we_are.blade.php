@@ -38,7 +38,7 @@
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 inner-column">
                 <div class="inner-content wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                    <figure class="image-box"><img src="{{$we_are?->left_image ?? '/images/resource/weare-1.jpg'}}" alt=""></figure>
+                    <figure class="image-box"><img src="{{'/storage/'.$we_are?->left_image ?? '/images/resource/weare-1.jpg'}}" alt=""></figure>
                     <div class="inner-box">
                         <div class="link-btn"><a href="#"><i class="flaticon-slim-right"></i></a></div>
                         <div class="text-content">
