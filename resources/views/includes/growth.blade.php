@@ -1,5 +1,5 @@
 <section class="growth-section">
-    <div class="image-column" style="background-image: url(images/background/growth-bg.jpg);"></div>
+    <div class="image-column" style="background-image: url(images/growth_bg.png);"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12 content-column">

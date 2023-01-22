@@ -14,7 +14,10 @@ class FrontController extends Controller
         $basic_info = $frontServices->GetBasicInfoData($request);
         $we_are = $frontServices->GetWhoWeAreData($request);
         $project_categories = $frontServices->GetProjectCategoriesData($request);
-        return view('index', compact('main_header', 'main_sliders', 'basic_info', 'we_are', 'project_categories'));
+        $testimonies = $frontServices->GetTestimoniesData($request);
+        $teams = $frontServices->GetTeamsData($request);
+        $news = $frontServices->GetNewsData($request);
+        return view('index', compact('main_header', 'main_sliders', 'basic_info', 'we_are', 'project_categories', 'testimonies', 'teams', 'news'));
     }
 
     public function comingsoon()

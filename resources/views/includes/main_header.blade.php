@@ -30,7 +30,7 @@
             <div class="outer-container">
                 <div class="nav-outer clearfix">
                     <div class="menu-area pull-left clearfix">
-                        <figure class="logo-box"><a href="index.html"><img src="{{$main_header?->hb_logo ?? '/images/logo-4.png'}}" alt=""></a></figure>
+                        <figure class="logo-box"><a href="/"><img src="{{$main_header?->hb_logo ?? '/images/logo-4.png'}}" alt=""></a></figure>
                         <nav class="main-menu navbar-expand-lg">
                             <div class="navbar-header">
                                 <!-- Toggle Button -->      
@@ -43,8 +43,8 @@
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li class="current"><a href="#">Home</a></li>
-                                    <li class=""><a href="#">About us</a></li>
-                                    <li class=""><a href="#">Contact us</a></li>
+                                    <li class=""><a href="/aboutus">About us</a></li>
+                                    <li class=""><a href="/contactus">Contact us</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -66,7 +66,7 @@
     <!--sticky Header-->
     <div class="sticky-header">
         <div class="container clearfix">
-            <figure class="logo-box"><a href="index.html"><img src="{{$main_header?->sh_logo ?? '/images/logo-4.png'}}" alt=""></a></figure>
+            <figure class="logo-box"><a href="/"><img src="{{$main_header?->sh_logo ?? '/images/logo-4.png'}}" alt=""></a></figure>
             <div class="menu-area">
                 <nav class="main-menu navbar-expand-lg">
                     <div class="navbar-header">
@@ -80,8 +80,8 @@
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
                             <li class="current"><a href="#">Home</a></li>
-                            <li class=""><a href="#">About us</a></li>
-                            <li class=""><a href="#">Contact us</a></li>
+                            <li class=""><a href="/aboutus">About us</a></li>
+                            <li class=""><a href="/contactus">Contact us</a></li>
                         </ul>
                     </div>
                 </nav>

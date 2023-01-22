@@ -4,30 +4,35 @@
             <div class="top-text">Testimonial</div>
             <div class="sec-title">
                 <h1>What people say about us</h1>
-                <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print<br />graphic or web designs. The passage is attributed to an unknown</p>
+                <p>We take pride in the feedback, suggestions and comments from our partners and clients.</p>
             </div>
         </div>
         <div class="two-column-carousel owl-carousel owl-theme">
+            @foreach ($testimonies as $testimony)
             <div class="testimonial-content">
                 <div class="inner-box">
-                    <div class="text">"Compared to other design software, Acto has a more intuitive and stable environment."</div>
+                    <div class="text">"{{$testimony->what_said}}"</div>
                     <div class="author-info">
-                        <figure class="author-thumb"><img src="/images/resource/testimonial-1.png" alt=""></figure>
-                        <h5>Tamim Anj</h5>
-                        <span class="designation">Systems Engineer</span>
+                        <figure class="author-thumb"><img src="{{$testimony?->profile ?? '/images/resource/testimonial-1.png'}}" alt=""></figure>
+                        <h5>{{$testimony?->who_said ?? 'Unknown'}}</h5>
+                        <span class="designation">{{$testimony?->profession ?? ''}}</span>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-content">
-                <div class="inner-box">
-                    <div class="text">"Compared to other design software, Acto has a more intuitive and stable environment."</div>
-                    <div class="author-info">
-                        <figure class="author-thumb"><img src="/images/resource/testimonial-2.png" alt=""></figure>
-                        <h5>Mahfuz Riad</h5>
-                        <span class="designation">Engineering and Technology</span>
-                    </div>
+
+           @if (count($testimonies) <= 1)
+           <div class="testimonial-content">
+            <div class="inner-box">
+                <div class="text">"{{$testimony->what_said}}"</div>
+                <div class="author-info">
+                    <figure class="author-thumb"><img src="{{$testimony?->profile ?? '/images/resource/testimonial-1.png'}}" alt=""></figure>
+                    <h5>{{$testimony?->who_said ?? 'Unknown'}}</h5>
+                    <span class="designation">{{$testimony?->profession ?? ''}}</span>
                 </div>
             </div>
+           @endif
+            @endforeach
+    
         </div>
     </div>
 </section>

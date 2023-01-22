@@ -30,7 +30,7 @@
                 <h1 class="error-title"> @yield('error_code') </h1>
                 <h2>@yield('title')</h2>
                 <div class="text">@yield('content')</div>
-                <div class="btn-box"><a href="index.html"><i class="fas fa-angle-left"></i>Go back Home</a></div>
+                <div class="btn-box"><a href="/"><i class="fas fa-angle-left"></i>Go back Home</a></div>
                 <figure class="image-box"><img src="/images/error_image.png" alt=""></figure>
             </div>
         </div>
