@@ -11,7 +11,7 @@
             @foreach ($testimonies as $testimony)
             <div class="testimonial-content">
                 <div class="inner-box">
-                    <div class="text">"{{$testimony->what_said}}"</div>
+                    <div class="text">"{{$testimony->testimony}}"</div>
                     <div class="author-info">
                         <figure class="author-thumb"><img src="{{$testimony?->profile ?? '/images/resource/testimonial-1.png'}}" alt=""></figure>
                         <h5>{{$testimony?->who_said ?? 'Unknown'}}</h5>
@@ -23,7 +23,7 @@
            @if (count($testimonies) <= 1)
            <div class="testimonial-content">
             <div class="inner-box">
-                <div class="text">"{{$testimony->what_said}}"</div>
+                <div class="text">"{{$testimony->testimony}}"</div>
                 <div class="author-info">
                     <figure class="author-thumb"><img src="{{$testimony?->profile ?? '/images/resource/testimonial-1.png'}}" alt=""></figure>
                     <h5>{{$testimony?->who_said ?? 'Unknown'}}</h5>
