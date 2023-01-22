@@ -5,7 +5,7 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\TextArea;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -45,7 +45,7 @@ class Testimonials extends Resource
     {
         return [
             ID::make()->sortable(),
-            TextArea::make('Testimony', 'what_said'),
+            Textarea::make('Testimony', 'what_said'),
             Text::make('Author title', 'profession'),
             Text::make('Testimony Author', 'who_said'),
             Image::make('Profile image', 'profile'),
