@@ -45,7 +45,7 @@ class Testimonials extends Resource
     {
         return [
             ID::make()->sortable(),
-            Textarea::make('Testimony', 'what_said'),
+            Textarea::make('Testimony'),
             Text::make('Author title', 'profession'),
             Text::make('Testimony Author', 'who_said'),
             Image::make('Profile image', 'profile'),
