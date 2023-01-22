@@ -30,7 +30,7 @@
             <div class="outer-container">
                 <div class="nav-outer clearfix">
                     <div class="menu-area pull-left clearfix">
-                        <figure class="logo-box"><a href="/"><img src="{{$main_header?->hb_logo ?? '/images/logo-4.png'}}" alt=""></a></figure>
+                        <figure class="logo-box"><a href="/"><img src="{{'/storage/'.$main_header?->hb_logo ?? '/images/logo-4.png'}}" alt=""></a></figure>
                         <nav class="main-menu navbar-expand-lg">
                             <div class="navbar-header">
                                 <!-- Toggle Button -->      
@@ -66,7 +66,7 @@
     <!--sticky Header-->
     <div class="sticky-header">
         <div class="container clearfix">
-            <figure class="logo-box"><a href="/"><img src="{{$main_header?->sh_logo ?? '/images/logo-4.png'}}" alt=""></a></figure>
+            <figure class="logo-box"><a href="/"><img src="{{'/storage/'.$main_header?->sh_logo ?? '/images/logo-4.png'}}" alt=""></a></figure>
             <div class="menu-area">
                 <nav class="main-menu navbar-expand-lg">
                     <div class="navbar-header">

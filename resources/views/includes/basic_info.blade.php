@@ -7,7 +7,7 @@
                         <h2>{{$basic_info?->title ?? 'Oil and Gas'}}</h2>
                         <p>{{$basic_info?->description ?? 'none'}}</p>
                     </div>
-                    <figure class="image-box"><img src="{{$basic_info?->resource_image ?? '/images/resource/oil-1.jpg'}}" alt=""></figure>
+                    <figure class="image-box"><img src="{{'/storage/'.$basic_info?->resource_image ?? '/images/resource/oil-1.jpg'}}" alt=""></figure>
                     <div class="inner-box wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
                         <h3>{{$basic_info?->second_title ?? ''}}</h3>
                         <div class="text">{{$basic_info?->second_description ?? ''}}</div>
