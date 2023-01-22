@@ -8,7 +8,7 @@
                         <figure class="image-box"><a href="#"><img src="{{'/storage/'.$team?->profile}}" alt=""></a></figure>
                         <div class="content-box">
                             <h4><a href="#">{{$team->name}}</a></h4>
-                            <span class="designation">{{$team->profession}}</span>
+                            <span class="designation">{{$team->title}}</span>
                         </div>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                         <figure class="image-box"><a href="#"><img src="{{'/storage/'.$team?->profile}}" alt=""></a></figure>
                         <div class="content-box">
                             <h4><a href="#">{{$team->name}}</a></h4>
-                            <span class="designation">{{$team->profession}}</span>
+                            <span class="designation">{{$team->title}}</span>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                         <figure class="image-box"><a href="#"><img src="{{'/storage/'.$team?->profile}}" alt=""></a></figure>
                         <div class="content-box">
                             <h4><a href="#">{{$team->name}}</a></h4>
-                            <span class="designation">{{$team->profession}}</span>
+                            <span class="designation">{{$team->title}}</span>
                         </div>
                     </div>
                 </div>
