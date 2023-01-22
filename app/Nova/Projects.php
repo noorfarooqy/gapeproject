@@ -5,7 +5,7 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\TextArea;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\BelongsTo;
@@ -48,7 +48,7 @@ class Projects extends Resource
             ID::make()->sortable(),
             BelongsTo::make('Project Category', 'ProjectCategory', ProjectCategories::class),
             Text::make('Project title'),
-            TextArea::make('Project description'),
+            Textarea::make('Project description'),
             Boolean::make('Is Active'),
             Image::make('Project Feature Image'),
 
