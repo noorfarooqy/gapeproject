@@ -1,7 +1,7 @@
 <section class="slider-style-four centred">
     <div class="main-slider-carousel-2 owl-carousel owl-theme">
         @foreach ($main_sliders as $slider)
-        <div class="slide" style="background-image:url({{$slider->background_image ?? 'images/main-slider/slider-3.jpg'}})">
+        <div class="slide" style="background-image:url({{'/storage/'.$slider->background_image ?? 'images/main-slider/slider-3.jpg'}})">
             <div class="container">
                 <div class="content-box">
                     <div class="top-text">{{$slider->main_title}}</div>
