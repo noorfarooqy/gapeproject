@@ -4,6 +4,11 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class SiteNews extends Resource
@@ -41,6 +46,11 @@ class SiteNews extends Resource
     {
         return [
             ID::make()->sortable(),
+            BelongsTo::make('Author', 'AuthorInfo', User::class),
+            Text::make('News title', 'news_title'),
+            Trix::make('News content', 'news_content'),
+            Image::make('Feature image', 'news_image'),
+            Boolean::make('Is Live'),
         ];
     }
 

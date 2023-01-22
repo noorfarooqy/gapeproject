@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
+            $table->text('what_said');
+            $table->string('who_said');
+            $table->string('profession');
+            $table->string('profile');
+            $table->boolean('is_visible')->default(true);
             $table->timestamps();
         });
     }

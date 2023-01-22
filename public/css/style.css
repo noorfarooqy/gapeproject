@@ -6202,7 +6202,7 @@ body.flyout-searchbar-active .wraper_flyout_search > .table > .table-cell .flyou
 .main-header.style-four .header-bottom .outer-container .nav-outer:before{
   position: absolute;
   content: '';
-  background: #fff;
+  /* background: #fff; */
   width: calc(100% - 26px);
   height: 100%;
   left: 13px;

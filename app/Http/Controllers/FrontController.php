@@ -16,4 +16,9 @@ class FrontController extends Controller
         $project_categories = $frontServices->GetProjectCategoriesData($request);
         return view('index', compact('main_header', 'main_sliders', 'basic_info', 'we_are', 'project_categories'));
     }
+
+    public function comingsoon()
+    {
+        return abort(503);
+    }
 }

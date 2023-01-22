@@ -37,3 +37,5 @@ Route::middleware([
 
 
 Route::get('/', [FrontController::class, 'index']);
+Route::get('/contactus', [FrontController::class, 'comingsoon']);
+Route::get('/aboutus', [FrontController::class, 'comingsoon']);

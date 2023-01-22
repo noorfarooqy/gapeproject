@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('site_news', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('author')->references('id')->on('users');
+            $table->string('news_title');
+            $table->text('news_content');
+            $table->text('news_image');
+            $table->boolean('is_live');
+            $table->unsignedBigInteger('views')->default(0);
             $table->timestamps();
         });
     }
