@@ -4,7 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\TextArea;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -47,13 +47,13 @@ class WhoWeAre extends Resource
             Text::make('Small title','small_title'),
             Text::make('Big title','big_title'),
             Text::make('Sub title','sub_title'),
-            TextArea::make('Description','description'),
+            Textarea::make('Description','description'),
             Text::make('Tagline one title','tagline_one_title'),
-            TextArea::make('Tagline one description','tagline_one_description'),
+            Textarea::make('Tagline one description','tagline_one_description'),
             Text::make('Tagline two title','tagline_two_title'),
-            TextArea::make('Tagline two description','tagline_two_description'),
+            Textarea::make('Tagline two description','tagline_two_description'),
             Text::make('Tagline three title','tagline_three_title'),
-            TextArea::make('Tagline three description','tagline_three_description'),
+            Textarea::make('Tagline three description','tagline_three_description'),
             Image::make('Left image', 'left_image'),
             Text::make('Left title', 'left_title'),
             Text::make('Left Description', 'left_description')
