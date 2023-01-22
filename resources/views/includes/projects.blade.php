@@ -20,11 +20,11 @@
             <div class="items-container row clearfix">
                 @foreach ($project_categories as $category)
                 @foreach ($category?->projects ?? [] as $project)
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all chamical oil_gas factory">
+                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all {{$category->category}} factory">
                     <div class="project-block-four">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="{{$project?->project_feature_image ?? '/images/gallery/project-12.jpg'}}" alt="">
+                                <img src="{{'/storage/'.$project?->project_feature_image ?? '/images/gallery/project-12.jpg'}}" alt="">
                             </figure>
                             <div class="overlay-box">
                                 <div class="box">
@@ -37,93 +37,45 @@
                         </div>
                     </div>
                 </div>
+                @if (count($category->projects) <= 1)
+                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all {{$category->category}} factory">
+                    <div class="project-block-four">
+                        <div class="inner-box">
+                            <figure class="image-box">
+                                <img src="{{'/storage/'.$project?->project_feature_image ?? '/images/gallery/project-12.jpg'}}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="box">
+                                    <div class="inner">
+                                        <h3><a href="case-single.html">{{$project->project_title}}</a></h3>
+                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all {{$category->category}} factory">
+                    <div class="project-block-four">
+                        <div class="inner-box">
+                            <figure class="image-box">
+                                <img src="{{'/storage/'.$project?->project_feature_image ?? '/images/gallery/project-12.jpg'}}" alt="">
+                            </figure>
+                            <div class="overlay-box">
+                                <div class="box">
+                                    <div class="inner">
+                                        <h3><a href="case-single.html">{{$project->project_title}}</a></h3>
+                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                @endif
                 @endforeach
                 @endforeach
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all oil_gas power_energy">
-                    <div class="project-block-four">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img src="/images/gallery/project-13.jpg" alt="">
-                            </figure>
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="inner">
-                                        <h3><a href="case-single.html">Upstream Oil & Gas Model Feature Work</a></h3>
-                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all chamical factory">
-                    <div class="project-block-four">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img src="/images/gallery/project-14.jpg" alt="">
-                            </figure>
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="inner">
-                                        <h3><a href="case-single.html">Upstream Oil & Gas Model Feature Work</a></h3>
-                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all oil_gas power_energy">
-                    <div class="project-block-four">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img src="/images/gallery/project-15.jpg" alt="">
-                            </figure>
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="inner">
-                                        <h3><a href="case-single.html">Upstream Oil & Gas Model Feature Work</a></h3>
-                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all chamical oil_gas factory">
-                    <div class="project-block-four">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img src="/images/gallery/project-16.jpg" alt="">
-                            </figure>
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="inner">
-                                        <h3><a href="case-single.html">Upstream Oil & Gas Model Feature Work</a></h3>
-                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all oil_gas chamical power_energy">
-                    <div class="project-block-four">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img src="/images/gallery/project-17.jpg" alt="">
-                            </figure>
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="inner">
-                                        <h3><a href="case-single.html">Upstream Oil & Gas Model Feature Work</a></h3>
-                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
