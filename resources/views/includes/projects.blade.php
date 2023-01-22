@@ -37,43 +37,7 @@
                         </div>
                     </div>
                 </div>
-                @if (count($category->projects) <= 1)
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all {{$category->category}} factory">
-                    <div class="project-block-four">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img src="{{'/storage/'.$project?->project_feature_image ?? '/images/gallery/project-12.jpg'}}" alt="">
-                            </figure>
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="inner">
-                                        <h3><a href="case-single.html">{{$project->project_title}}</a></h3>
-                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all {{$category->category}} factory">
-                    <div class="project-block-four">
-                        <div class="inner-box">
-                            <figure class="image-box">
-                                <img src="{{'/storage/'.$project?->project_feature_image ?? '/images/gallery/project-12.jpg'}}" alt="">
-                            </figure>
-                            <div class="overlay-box">
-                                <div class="box">
-                                    <div class="inner">
-                                        <h3><a href="case-single.html">{{$project->project_title}}</a></h3>
-                                        <div class="btn-box"><a href="case-single.html">Learn more</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    
-                @endif
+                
                 @endforeach
                 @endforeach
             </div>
